@@ -1,0 +1,75 @@
+print("*************************************")
+print('CONVERTIR DE BASE "M" A UNA BASE "N"')
+print("*************************************")
+
+numero = (input('Ingrese el numero : '))
+M = int(input('Ingrese el valor de la base "M" : '))
+N = int(input('Ingrese el valor de la base "N" : '))
+print()
+
+#De la base a decimal
+if (M == 10):
+    decimal = (int(numero, 10))
+    if (N == 10):
+        resultado = numero
+        print("El numero en base", N ," es : ", resultado)
+
+if (M == 2):
+    decimal = (int(numero, 2))
+    if (N == 10):
+        decimal = (int(numero, 2))
+        resultado = decimal
+        print("El numero en base", N , "es : ", resultado)
+    elif (N == 2):
+        resultado = numero
+        print("El numero en base", N , "es : ", resultado)
+
+if (M == 8):
+    decimal = (int(numero, 8))
+    if (N == 10):
+        decimal = (int(numero, 8))
+        resultado = decimal
+        print("El numero en base", N , "es : ", resultado)
+    elif (N == 8):
+        resultado = numero
+        print("El numero en base", N , "es : ", resultado)
+
+if (M == 16):
+    decimal = (int(numero, 16))
+    if (N == 10):
+        decimal = (int(numero, 16))
+        resultado = decimal
+        print("El numero en base", N , "es : ", resultado)
+    elif (N == 16):
+        resultado = numero
+        print("El numero en base", N , "es : ", resultado)
+
+#De decimal a otra base
+if (N == 2):
+    resultado = bin(decimal)[2:]
+    print("El numero en base", N , "es : ", resultado)
+
+if (N == 8):
+    resultado = oct(decimal)[2:]
+    print("El numero en base", N , "es : ", resultado)
+
+if (N == 16):
+    resultado = hex(decimal)[2:]
+    print("El numero en base", N , "es : ", resultado)
+
+#valor en binario
+if (M == 2):
+    print("El valor en binario es: ", numero)
+elif(N==2):
+    print(None, end=" ")
+else:
+    print("El valor en binario es: ", bin(decimal)[2:])
+
+#Mensaje en ASII
+ASCII = []
+Resultado = (str(resultado))
+for character in Resultado:
+    ASCII.append(ord(character)) 
+print("El valor en ASCII es : ", ASCII)
+print()
+print("*************************************")
